@@ -1,0 +1,45 @@
+Lesson 1:
+
+Learnt how hard it is to compare two files especially when they are large as it
+becomes tedious to compare / finding bugs. Solution to this problem is using Tools like FC (File Compare)
+in CMD (For Windows) or Diff (Differences) in Terminal (For Mac / Linux).
+
+--> Commands Used:
+CMD: fc old_file.* new_file.*
+Terminal: diff -u old_file.* new_file.*
+
+Note: * stands for any extension such as: txt, php, java, py, html, css, js, etc.. 
+
+Summary:
+By viewing a diff between two files it made it easy to know which lines I added that introduced bug in comparison with the old file
+
+Summary 2:
+Having easy access to the entire history of a file make me a better programmer as it is easy it makes it more efficient to find new bugs introduced in the code, and also it makes it easy in case you want to add a certain feature in the old version.
+
+Summary 3:
+Pros and Cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does are:
+- Manually choosing when to commit it gives flexibility putting only logical commits which indicates a certain logical change per commit while
+- Automatically saving creates more versions than necessary which makes it even harder to know where you did a certain logical change.
+
+Summary 4:
+Some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately beacuase;
+- Sometimes all files can be affected by the changes you make, and it ensures that your doesn't break when you want to undo a commit because all files will return to that version. For Others, they can introduce bugs because each file individually for interrelated files is bad as in can cause bugs when you want to go back to previous versions
+
+Summary 5:
+Use the commands git log and git diff to view the history of files,
+Issue
+	git log to see all previous versions with their commit id's and 
+to check the difference in lines added and lines removed use 
+	git diff previous_commit_id next_commit_id
+	(Use down arrow key to see previous commits)
+Note: Number of plus equals to number of lines added, Number of minus equals to number of lines removed
+
+Summary 6:
+How might using version control make you more confident to make changes that could break something?
+It makes me very confident as I know I can revert back to all previous commits until I find the one that introduced the bug (git checkout commit_id), then I can fix the bug buy checking the difference between commits using git diff 
+
+For configurations of Git bash:
+-After git-completion.bash, git-prompt.sh
+Execute these: 
+	git config --global push.default upstream
+	git config --global merge.conflictstyle diff3
