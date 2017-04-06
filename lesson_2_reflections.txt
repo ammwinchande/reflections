@@ -13,18 +13,36 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
-
+- Use git status to know which file you have changed logically, then use
+  git add filename and when you commit now all the other files you made changes to
+  won't be commited as their not in the staging area allowing one commit per logical
+  change
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
-
+- Branches helps in situations where you want to add another feature into the program you
+  developing and at the same time that feature is experimental and you don't want to change
+  the master branch for that matter.
+  It makes it easy to have different versions of the same code and later merge them 
+  together with ease.
 
 How do the diagrams help you visualize the branch structure?
-
+- Diagrams helps to view the projects history and where each of the brach starts and 
+  where master is, so when switching from one branch to another branch becomes easy and
+  also merging also becomes easy.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
-
+- Merging two branches combines the feature/bug fix branch to the master branch and all
+  changes added into the feature/bug fix code will be imported to the current master branch
+  and are inserted / sorted based on timestamps
 
 What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
 manually?
+- Pros of using git automatic merging is when the branch and master doesn't conflict
+  of interest in the code meaning the code that are added from branch to master has no
+  other version of it in master-> happens smoothly and no hassle to figure out which code
+  to keep and which to remove like manual merging
+- Cons of using automatic merging is that you lack the flexibility of keeping a certain
+  version of the code you want as git is not smart enough to detect which code runs better
+  and under which circumstances
